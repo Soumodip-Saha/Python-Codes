@@ -1,0 +1,16 @@
+"""
+Write a Program in Python to Generate the Fibonacci Series up to Nth Term.
+1 + 1 + 2 + 3 + 5 + 8 + 13 + . . . . + Nth Term
+"""
+n = int(input("Enter the number of terms : "))
+a, b = 0, 1
+if n < 0:
+    print("Number of terms cannot be negative")
+else:
+    print("Fibonacci Series up to", n, "terms:")
+    for i in range(n):
+        if i < n - 1:
+            print(b, end=" + ")
+        else:
+            print(b)
+        a, b = b, a + b
