@@ -1,0 +1,5 @@
+"""Write a program that accepts a list 
+   from user and print the alternate 
+   element of list."""
+list=eval(input("Enter the list : "))
+print("The alternate elements of list are : ",list[::2])
