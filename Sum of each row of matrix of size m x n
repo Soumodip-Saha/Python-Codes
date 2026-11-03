@@ -1,0 +1,33 @@
+"""
+Find the sum of each row of matrix of size m x n. For example for the following matrix output will be like this :
+2	11	7	12
+5	2	9	15
+8	3	10	42
+Sum of row 1 = 32
+Sum of row 2 = 31
+Sum of row 3 = 63
+"""
+rows=int(input("Enter the number of rows : "))
+cols=int(input("Enter the number of columns : "))
+matrix = []
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(0)
+    matrix.append(row)
+print("Enter the elements row by row:")
+for i in range(rows):
+    for j in range(cols):
+        print("Enter element for row", i+1, "column", j+1, ": ")
+        matrix[i][j] = int(input())
+print("--- Matrix ---")
+for i in range(rows):
+    for j in range(cols):
+        print(matrix[i][j], end="\t")
+    print()
+print("--- Results ---")
+for i in range(rows):
+    row_sum = 0
+    for j in range(cols):
+        row_sum += matrix[i][j]
+    print("Sum of row", i + 1, "=", row_sum)
