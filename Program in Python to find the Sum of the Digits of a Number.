@@ -1,0 +1,12 @@
+"""
+Write a Program in Python to find the Sum of the Digits of a Number.
+"""
+num = int(input("Enter a number : "))
+if num < 0:
+    print("Sum of negative number is not possible !!!!")
+else:
+    digit_sum = 0
+    while num > 0:
+        digit_sum += num % 10
+        num //= 10
+    print("The sum of the digits is", digit_sum)
