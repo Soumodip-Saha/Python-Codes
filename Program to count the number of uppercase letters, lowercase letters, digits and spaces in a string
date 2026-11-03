@@ -1,0 +1,19 @@
+# Write a program to count the number of uppercase letters, lowercase letters, digits and spaces in a string
+s = input("Enter a string: ")
+upper = 0
+lower = 0
+digits = 0
+spaces = 0
+for i in s:
+    if i.isupper():
+        upper += 1
+    elif i.islower():
+        lower += 1
+    elif i.isdigit():
+        digits += 1
+    elif i == " ":
+        spaces += 1
+print("Uppercase letters:", upper)
+print("Lowercase letters:", lower)
+print("Digits:", digits)
+print("Spaces:", spaces)
