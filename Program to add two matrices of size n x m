@@ -1,0 +1,31 @@
+"""Write a program to add two matrices of size n x m."""
+rows=int(input("Enter the number of rows : "))
+cols=int(input("Enter the number of columns : "))
+matrix1 = []
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(0)
+    matrix1.append(row)
+print("Enter the elements of 1st matrix row by row:")
+for i in range(rows):
+    for j in range(cols):
+        print("Enter element for row", i+1, "column", j+1, ": ")
+        matrix1[i][j] = int(input())
+matrix2 = []
+for k in range(rows):
+    row = []
+    for l in range(cols):
+        row.append(0)
+    matrix2.append(row)
+print("Enter the elements of 2nd matrix row by row:")
+for k in range(rows):
+    for l in range(cols):
+        print("Enter element for row", k+1, "column", l+1, ": ")
+        matrix2[k][l] = int(input())
+print("---SUM OF MATRICES---")
+for m in range(rows):
+    for n in range(cols):
+        print(matrix1[m][n] + matrix2[m][n], end="\t")
+    print()
+    
