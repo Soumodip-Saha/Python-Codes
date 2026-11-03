@@ -1,0 +1,5 @@
+"""Write a program that accepts a list from user. 
+   Your program should reverse the content of list 
+   and display it. Do not use reverse() method. """
+list=eval(input("Enter the list : "))
+print("The reversed list is : ",list[::-1])
