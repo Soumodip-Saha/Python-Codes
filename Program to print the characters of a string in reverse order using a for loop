@@ -1,0 +1,5 @@
+"""Write a program to print the characters of a string in reverse order using a for loop."""
+string = input("Enter a string: ")
+for i in range(len(string) - 1, -1, -1):
+    print(string[i], end="")
+print()  # To move to the next line after printing the reversed string
