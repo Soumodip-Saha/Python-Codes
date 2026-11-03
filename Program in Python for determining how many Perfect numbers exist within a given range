@@ -1,0 +1,20 @@
+"""
+Write a Program in Python for determining how many Perfect numbers exist within a given range.
+"""
+start = int(input("Enter the start of the range : "))
+end = int(input("Enter the end of the range : "))
+if start < 0 or end < 0:
+    print("Perfect number of negative number is not possible !!!!")
+else:
+    perfect_numbers = []
+    for num in range(start, end + 1):
+        sum_of_divisors = 0
+        for i in range(1, num):
+            if num % i == 0:
+                sum_of_divisors += i
+        if sum_of_divisors == num and num != 0:
+            perfect_numbers.append(num)
+    if perfect_numbers:
+        print("Perfect numbers in the range", start, "to", end, "are:", perfect_numbers)
+    else:
+        print("No Perfect numbers found in the range", start, "to", end)
