@@ -1,0 +1,19 @@
+"""
+Write a Program in Python for determining whether a number is an Armstrong number or not.
+(e.g. 153 is an Armstrong number because 13 + 53 + 33 = 153.)
+"""
+num = int(input("Enter a number : "))
+if num < 0:
+    print("Armstrong number of negative number is not possible !!!!")
+else:
+    order = len(str(num))
+    sum_of_powers = 0
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum_of_powers += digit ** order
+        temp //= 10
+    if sum_of_powers == num:
+        print(num, "is an Armstrong Number.")
+    else:
+        print(num, "is not an Armstrong Number.")
