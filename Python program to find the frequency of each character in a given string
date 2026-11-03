@@ -1,0 +1,9 @@
+#  Write a Python program to find the frequency of each character in a given string
+s = input("Enter a string : ")
+checked_chars = []
+print("Character frequencies:")
+for char in s:
+    if char not in checked_chars:
+        frequency = s.count(char)
+        print(f"'{char}': {frequency}")
+        checked_chars.append(char)
