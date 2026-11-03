@@ -1,0 +1,36 @@
+"""
+Write a Program in Python to enter marks of five subjects.
+Find the Sum and the Average of them and then assign grade
+to the students according to the rule below
+AVG                   GRADE
+>=90% to <=100%			O
+>=80% to <=89%			E
+>=70% to <=79%			A
+>=60% to <=69%			B
+>=50% to <=59%			C
+>=40% to <=49%			D
+       >40%			  FAIL
+"""
+num1 = float(input("Enter marks of subject 1: "))
+num2 = float(input("Enter marks of subject 2: "))
+num3 = float(input("Enter marks of subject 3: "))
+num4 = float(input("Enter marks of subject 4: "))
+num5 = float(input("Enter marks of subject 5: "))
+total = num1 + num2 + num3 + num4 + num5
+average = total / 5
+print("Total marks:", total)
+print("Average marks:", average)
+if average >= 90:
+    print("Grade: O")
+elif average >= 80:
+    print("Grade: E")
+elif average >= 70:
+    print("Grade: A")
+elif average >= 60:
+    print("Grade: B")
+elif average >= 50:
+    print("Grade: C")
+elif average >= 40:
+    print("Grade: D")
+else:
+    print("Grade: FAIL")
