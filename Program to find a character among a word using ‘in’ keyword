@@ -1,0 +1,9 @@
+"""
+WAP to find a character among a word using ‘in’ keyword.
+"""
+word = input("Enter a word: ")
+char = input("Enter a character to find: ")
+if char in word:
+    print(f"The character '{char}' is present in the word '{word}'.")
+else:
+    print(f"The character '{char}' is not present in the word '{word}'.")
