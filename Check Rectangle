@@ -1,0 +1,16 @@
+"""
+Write a program that prompts the user to input the length and the width of a rectangle
+and outputs the area and perimeter of the rectangle. The formula is
+Area = Length x Width & Circumference = 2 x (Length + Width) 
+"""
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+choice = input("Do you want to calculate area or perimeter? Enter 1 for area and 2 for perimeter: ")
+if choice == '1':
+    area = length * width
+    print("Area of the rectangle:", area)
+elif choice == '2':
+    perimeter = 2 * (length + width)
+    print("Perimeter of the rectangle:", perimeter)
+else:
+    print("Invalid choice. Please enter '1' or '2'.")
