@@ -1,0 +1,14 @@
+"""
+WAP to check whether a entered number is two digit or three digit or four digit or single digit number.
+"""
+num = int(input("Enter a number: "))
+if 0 <= num < 10:
+    print("The number is a single digit number.")
+elif 10 <= num < 100:
+    print("The number is a two digit number.")
+elif 100 <= num < 1000:
+    print("The number is a three digit number.")
+elif 1000 <= num < 10000:
+    print("The number is a four digit number.")
+else:
+    print("The number is not a single, two, three, or four digit number.")
