@@ -1,0 +1,10 @@
+"""Find and display the largest number 
+   of a list without using built-in function max(). 
+   Your program should ask the user to input values 
+   in list from keyboard."""
+list=eval(input("Enter the list : "))
+largest=list[0]
+for i in list:
+    if i>largest:
+        largest=i
+print("The largest number in the list is : ",largest)
