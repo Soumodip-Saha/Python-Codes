@@ -1,0 +1,27 @@
+''' Write a program that reads a string from the user 
+    containing a date in the form mm/dd/yyyy. It should 
+    print the date in the form March 12, 2021. '''
+months = ["", "January", "February", "March", "April", "May", "June", 
+          "July", "August", "September", "October", "November", "December"]
+days_in_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+while True:
+    date_string = input("Enter a date in the form mm/dd/yyyy: ")
+    parts = date_string.split("/")
+    if len(parts) != 3:
+        print("Invalid format! Please use slashes to separate mm, dd, and yyyy.\n")
+        continue
+    if not (parts[0].isdigit() and parts[1].isdigit() and parts[2].isdigit()):
+        print("Invalid input! Please enter only numbers.\n")
+        continue
+    month = int(parts[0])
+    day = int(parts[1])
+    year = int(parts[2])
+    if month < 1 or month > 12:
+        print("Invalid month! Must be between 1 and 12.\n")
+        continue
+    if day < 1 or day > days_in_month[month]:
+        print(f"Invalid day! That month only has {days_in_month[month]} days.\n")
+        continue
+    month_name = months[month]
+    print(f"{month_name} {day}, {year}")
+    break
